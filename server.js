@@ -63,8 +63,9 @@ app.get('/phillipines', function(req, res){
 
 //bonus 1:  using search in the url and simply providing an erro message rather than another page
 app.get('/:country', function(req, res){
-
-    res.send("Magellan did not visit " + req.params.country)
+    
+    countrySearch = req.params.country.toUpperCase();
+    res.send("SORRY, MAGELLAN DID NOT VISIT " + countrySearch)
 });
 
 // Creating Server and Listening for Connections \\
