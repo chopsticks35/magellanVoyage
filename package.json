@@ -1,0 +1,23 @@
+{
+  "name": "magellanvoyage",
+  "version": "1.0.0",
+  "description": "node and express project ",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chopsticks35/magellanVoyage.git"
+  },
+  "keywords": [
+    "magellan"
+  ],
+  "author": "chris and ti",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chopsticks35/magellanVoyage/issues"
+  },
+  "homepage": "https://github.com/chopsticks35/magellanVoyage#readme"
+}
