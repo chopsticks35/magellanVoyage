@@ -12,6 +12,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + '/public'));
 
 // Routes \\
+
+//using get and post to navigate button to next routes \\
+
+//home page \\
 app.get('/', function(req, res){
   res.sendFile('index.html', {root: './public'});
 });
@@ -52,8 +56,15 @@ app.post('/phillipines', function(req, res){
 	res.redirect('/phillipines')
 })
 
+// no next route after phillipines \\
 app.get('/phillipines', function(req, res){
   res.sendFile('phillipines.html', {root: './public'})
+});
+
+//bonus 1:  using search in the url and simply providing an erro message rather than another page
+app.get('/:country', function(req, res){
+
+    res.send("Magellan did not visit " + req.params.country)
 });
 
 // Creating Server and Listening for Connections \\
