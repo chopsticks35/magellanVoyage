@@ -13,7 +13,7 @@ app.use(express.static(__dirname + '/public'));
 
 // Routes \\
 app.get('/', function(req, res){
-  res.sendFile('./public/index.html')
+  res.sendFile('index.html', {root: './public'})
 });
 
 app.post('/next', function(req, res){
@@ -21,7 +21,7 @@ app.post('/next', function(req, res){
 })
 
 app.get('/canaryIslands', function(req, res){
-  res.send('./public/canaryIslands.html')
+  res.sendFile('canaryIslands.html', {root: './public'})
 });
 
 app.post('/capeVerde', function(req, res){
@@ -29,7 +29,7 @@ app.post('/capeVerde', function(req, res){
 })
 
 app.get('/capeVerde', function(req, res){
-  res.send('./public/capeVerde.html')
+  res.sendFile('./public/capeVerde.html')
 });
 
 app.post('/straitOfMagellan', function(req, res){
@@ -37,7 +37,7 @@ app.post('/straitOfMagellan', function(req, res){
 })
 
 app.get('/straitOfMagellan', function(req, res){
-  res.send('./public/straitOfMagellan.html')
+  res.sendFile('./public/straitOfMagellan.html')
 });
 
 app.post('/guam', function(req, res){
@@ -45,7 +45,7 @@ app.post('/guam', function(req, res){
 })
 
 app.get('/guam', function(req, res){
-  res.send('./public/guam.html')
+  res.sendFile('./public/guam.html')
 });
 
 app.post('/phillipines', function(req, res){
@@ -53,7 +53,7 @@ app.post('/phillipines', function(req, res){
 })
 
 app.get('/phillipines', function(req, res){
-  res.send('./public/phillipines.html')
+  res.send('/public/phillipines.html')
 });
 
 // Creating Server and Listening for Connections \\
